@@ -983,8 +983,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1930281401}
-        m_TargetAssemblyTypeName: CarregarCena, Assembly-CSharp
-        m_MethodName: Carregar
+        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
+        m_MethodName: IniciarJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1044,7 +1044,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4fc378fe93375044b080ecee6e2f61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarregarCena
-  nomeDaCena: GetStarted_Scene
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

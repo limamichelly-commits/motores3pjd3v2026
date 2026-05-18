@@ -1,16 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using System.Collections;
 
-public class TelaInicial : MonoBehaviour
+public class Splash : MonoBehaviour
 {
-    void Start()
+    IEnumerator Start()
     {
-        Invoke("IrParaOMenu", 2f);
-    }
+        yield return new WaitForSeconds(2f);
 
-    void IrParaOMenu()
-    {
-       
-        SceneManager.LoadScene("Menu");
+        GameManager.Instancia.CarregarCena("MenuPrincipal");
     }
 }

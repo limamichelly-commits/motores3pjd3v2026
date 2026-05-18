@@ -1,22 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class CarregarCena : MonoBehaviour
 {
- 
-    public string nomeDaCena;
-
-    public void Carregar()
+    public void IniciarJogo()
     {
-        SceneManager.LoadScene(nomeDaCena);
-    }
-    void Start()
-    {
-        
+        GameManager.Instancia.CarregarCena("Jogo");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Sair()
     {
-        
+        GameManager.Instancia.SairJogo();
     }
 }
