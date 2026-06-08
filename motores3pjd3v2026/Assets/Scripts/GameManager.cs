@@ -1,23 +1,88 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-  
-    public string gameState;
+    public static GameManager Instancia;
 
-    void Start()
+    public enum EstadoJogo
     {
-      
-        gameState = "Starting";
-        Debug.Log("Game State: " + gameState);
-
-        SceneManager.LoadScene("Splash");
+        Iniciando,
+        MenuPrincipal,
+        Gameplay
     }
 
-  
-    public void ChangeScene(string GetStarted_Scene )
+    public EstadoJogo estadoAtual;
+
+    private PlayerInput entradaJogador;
+
+    private void Awake()
     {
-        SceneManager.LoadScene(GetStarted_Scene);
+        
+        if (Instancia == null)
+        {
+            Instancia = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        MudarEstado(EstadoJogo.Iniciando);
+
+        AlocarInput();
+
+        CarregarCena("Splash");
+    }
+
+    public void MudarEstado(EstadoJogo novoEstado)
+    {
+        estadoAtual = novoEstado;
+
+        Debug.Log("Estado atual: " + estadoAtual);
+    }
+
+    public void CarregarCena(string nomeCena)
+    {
+        SceneManager.LoadScene(nomeCena);
+
+        if (nomeCena == "Splash")
+        {
+            MudarEstado(EstadoJogo.Iniciando);
+        }
+        else if (nomeCena == "MenuPrincipal")
+        {
+            MudarEstado(EstadoJogo.MenuPrincipal);
+        }
+        else if (nomeCena == "Jogo")
+        {
+            MudarEstado(EstadoJogo.Gameplay);
+        }
+
+        AlocarInput();
+    }
+
+    public void AlocarInput()
+    {
+        entradaJogador = FindFirstObjectByType<PlayerInput>();
+        if (entradaJogador != null)
+        {
+            Debug.Log("Player Input encontrado!");
+        }
+        else
+        {
+            Debug.Log("Nenhum Player Input encontrado.");
+        }
+    }
+
+    public void SairJogo()
+    {
+        Debug.Log("Saindo do jogo...");
+        Application.Quit();
     }
 }
