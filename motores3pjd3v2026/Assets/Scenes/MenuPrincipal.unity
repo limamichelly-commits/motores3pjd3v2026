@@ -982,9 +982,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< HEAD:motores3pjd3v2026/Assets/Scenes/Menu.unity
       - m_Target: {fileID: 11500000, guid: b98dc2b46df1e6b4db8e88dadf673325, type: 3}
         m_TargetAssemblyTypeName: CarregarCena, Assembly-CSharp
         m_MethodName: 
+=======
+      - m_Target: {fileID: 1930281401}
+        m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
+        m_MethodName: IniciarJogo
+>>>>>>> c86652771b005121aeb9488cecefb20b28c7ca68:motores3pjd3v2026/Assets/Scenes/MenuPrincipal.unity
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
