@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash.unity
     guid: 6ae6ac214d9d25d4792cecbb30b14313
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal.unity
-    guid: 4cf2d8dd12d52524d963bee97b2bd644
+    path: Assets/Scenes/Menu.unity
+    guid: 2baab9a95d0929440b6810502f53ab39
   - enabled: 1
     path: Assets/Scenes/Jogo.unity
     guid: 6888813f2bd9e4521b9b1343abf0c60f
+  - enabled: 1
+    path: Assets/Scenes/GUI.unity
+    guid: ebea9ad404e8fec47b28d3999e0f342b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
