@@ -4,7 +4,7 @@ public class CarregarCena : MonoBehaviour
 {
     public void IniciarJogo()
     {
-        GameManager.Instancia.CarregarCena("Jogo");
+        GameManager.Instancia.CarregarCena("Menu");
     }
 
     public void Sair()
