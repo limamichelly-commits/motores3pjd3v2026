@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 571617500}
   - component: {fileID: 571617499}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoinsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 941623270}
   - component: {fileID: 941623269}
   - component: {fileID: 941623268}
+  - component: {fileID: 941623272}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -529,6 +530,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &941623272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941623267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa3444189e2b20419663f2af66c43d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorInterface
+  textoMoedas: {fileID: 571617499}
 --- !u!1 &1280780471
 GameObject:
   m_ObjectHideFlags: 0

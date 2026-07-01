@@ -1,11 +1,10 @@
 using System;
 
-public static class PlayerObserverManager
+public static partial class PlayerObserverManager
 {
-    public static Action<int> OnCoinsChanged;
-
-    public static void NotifyCoinsChanged(int coins)
+    public static event Action<int> OnMoedasAtualizadas;
+    public static void NotificarMoedas(int quantidade)
     {
-        OnCoinsChanged?.Invoke(coins);
+        OnMoedasAtualizadas?.Invoke(quantidade);
     }
 }
