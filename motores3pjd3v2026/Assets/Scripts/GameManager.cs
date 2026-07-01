@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
@@ -14,12 +15,13 @@ public class GameManager : MonoBehaviour
     }
 
     public EstadoJogo estadoAtual;
-
     private PlayerInput entradaJogador;
+
+    [Header("Configurações do Splash")]
+    [SerializeField] private float tempoDoSplash = 2f; // Tempo que o Splash vai durar
 
     private void Awake()
     {
-        
         if (Instancia == null)
         {
             Instancia = this;
@@ -34,16 +36,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         MudarEstado(EstadoJogo.Iniciando);
-
         AlocarInput();
 
-        CarregarCena("Splash");
+        // INICIA A CONTAGEM DO SPLASH ASSIM QUE O JOGO ABRE
+        StartCoroutine(RotinaSplash());
+    }
+
+    private IEnumerator RotinaSplash()
+    {
+        // Espera os 2 segundos na tela de Splash
+        yield return new WaitForSeconds(tempoDoSplash);
+
+        // Carrega o Menu Principal automaticamente usando o nome EXATO da cena
+        CarregarCena("MenuPrincipal");
     }
 
     public void MudarEstado(EstadoJogo novoEstado)
     {
         estadoAtual = novoEstado;
-
         Debug.Log("Estado atual: " + estadoAtual);
     }
 
@@ -55,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             MudarEstado(EstadoJogo.Iniciando);
         }
-        else if (nomeCena == "MenuPrincipal")
+        else if (nomeCena == "MenuPrincipal" || nomeCena == "Menu")
         {
             MudarEstado(EstadoJogo.MenuPrincipal);
         }

@@ -160,10 +160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1197414975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1db2e7e0ed31a424799b17cd982368fe, type: 3}
+  m_Script: {fileID: 11500000, guid: c756be41b6881404e846a28e4b263714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameState: 
+  estadoAtual: 0
 --- !u!1001 &1514559607
 PrefabInstance:
   m_ObjectHideFlags: 0
