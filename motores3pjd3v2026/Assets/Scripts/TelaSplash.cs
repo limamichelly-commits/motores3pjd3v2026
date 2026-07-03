@@ -1,13 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
-public class GerenciadorMenu : MonoBehaviour
+public class TelaSplash : MonoBehaviour
 {
-  
-    [SerializeField] private string nomeDaCenaDestino = "Jogo"; 
-
-    public void IrParaTelaInicial()
+    IEnumerator Start()
     {
-        SceneManager.LoadScene(nomeDaCenaDestino);
+        yield return new WaitForSeconds(2f);
+
+        GameManager.Instancia.CarregarCena("MenuPrincipal");
     }
 }
