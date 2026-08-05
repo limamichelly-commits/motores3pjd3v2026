@@ -599,10 +599,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 112204322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e6f507f1922fe41b7b97564574c329, type: 3}
+  m_Script: {fileID: 11500000, guid: 931055f86e1a93c43821a9cdce9410a0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Jogador
-  moedas: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCoins
 --- !u!1001 &435336853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2279,7 +2278,7 @@ GameObject:
   - component: {fileID: 1995078561}
   - component: {fileID: 1995078560}
   - component: {fileID: 1995078559}
-  - component: {fileID: 1995078558}
+  - component: {fileID: 1995078562}
   - component: {fileID: 1995078557}
   m_Layer: 0
   m_Name: moeda (1)
@@ -2311,18 +2310,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &1995078558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995078556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2e85bcea7a2987489cdb129823caa7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Coin
 --- !u!23 &1995078559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2395,6 +2382,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 80.963, y: 27.704, z: 1.631}
+--- !u!114 &1995078562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995078556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e85bcea7a2987489cdb129823caa7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Coin
 --- !u!1 &2035212448
 GameObject:
   m_ObjectHideFlags: 0
